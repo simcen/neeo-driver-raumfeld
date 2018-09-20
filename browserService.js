@@ -20,7 +20,7 @@ function browse(listOptions) {
   debug('browse called with %o', listOptions);
   const params = listOptions.params;
   const browseIdentifier = params.browseIdentifier;
-  
+
   //check if a root view should be displayed
   if (listOptions.showRoot) {
     var results = getRootListModel(listOptions);
@@ -61,21 +61,15 @@ function getRootListModel(listOptions) {
     */
 
     .addListTiles([{
-      thumbnailUri: images.rtlBerlin,
-      actionIdentifier: '0/RadioTime/Favorites/MyFavorites/3',
+      title : 'Bern 1',
+      thumbnailUri: images.bern1,
+      actionIdentifier: '0/RadioTime/Favorites/MyFavorites/1',
     }, {
-      thumbnailUri: images.chillout,
-      actionIdentifier: '0/RadioTime/Favorites/MyFavorites/5',
+      title: 'SRF 3',
+      thumbnailUri: images.srf3,
+      actionIdentifier: '0/RadioTime/Favorites/MyFavorites/6',
     }])
-    
-    .addListTiles([ {
-      title : 'Antenne 1',
-      thumbnailUri: images.antenne1, 
-      actionIdentifier: '0/RadioTime/Favorites/MyFavorites/2',
-    }, {
-      thumbnailUri: images.swr3,
-      actionIdentifier: '0/RadioTime/Favorites/MyFavorites/7',
-    }])
+
 
     .addListHeader('Browse')
     .addListItems(directory.getRootItems());
